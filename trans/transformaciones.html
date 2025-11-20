@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformaciones</title>
+    <style>
+        .tit {
+            text-align: center;
+            background-color: aquamarine;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+        }
+
+        .sin-margin {
+            margin-top: 0;
+            
+        }
+
+        .division {
+            column-count: 2;
+            column-rule: 3px dotted darkmagenta;
+            background-color: bisque;
+            padding-left: 10px;
+        }
+
+        .division2 {
+            column-count: 2;
+            column-rule: 3px dotted rgb(4, 41, 255);
+            background-color: rgb(163, 229, 8);
+            padding-left: 10px;
+        }
+
+        .mover:hover {
+            transform: translate(50px, 50px);
+            /* transition: all 1s; */
+            transition: ease-in 2s;
+        }
+
+        .rotar:hover {
+            transform: rotate(180deg);
+            /* transition: all 1s; */
+        }
+
+        .escala:hover {
+            /* transform: scale(0.5); */
+            transform: scale(3, 2);
+            /* el primer valor aumenta Xveces en X, el segundo en Y*/
+        }
+
+        .escalaX:hover {
+            transform: scaleX(2);
+        }
+
+        .escalaY:hover {
+            transform: scaleY(2);
+        }
+
+        .aplastar:hover {
+            transform: skew(35deg, 35deg);
+            /* Existe skewX y skewY */
+        }
+
+        .rotarX:hover {
+            transform: rotateX(120deg);
+        }
+
+        .rotarY:hover {
+            transform: rotateY(120deg);
+        }
+
+        .zoomIn {
+            width: 200px;
+            height: 200px;
+            transition: 2s;
+        }
+
+        .zoomIn:hover {
+            height: 50px;
+            width: 50px;
+        }
+
+        /* La transicion y la duracion se pone en la claseX sin hover, 
+las dimensiones se la transicion se ponen en la claseX:hover  */
+        .zoomOut {
+            width: 200px;
+            height: 200px;
+            transition: 4s;
+        }
+
+        .zoomOut:hover {
+            width: 300px;
+            height: 300px;
+            transform: rotate(60deg);
+        }
+
+        @keyframes cambiaColor {
+            from {
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+            }
+
+            to {
+                color: black;
+                background-color: rgb(163, 229, 8);
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        }
+
+        .elemento {
+            width: 180px;
+            height: 200px;
+            padding: 25px;
+            animation-name: cambiaColor;
+            animation-duration: 5s;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><img src="../img/logo2.png" alt="" width="70px"></a>
+        <div class="busqueda">
+            <label for="">Buscar:</label>
+            <input type="text" name="" id="" placeholder="Hoy tengo ganas de ...">
+        </div>
+        <div class="opciones">
+            <a href="../cv/cv.html">
+                <li>Curriculum Vitae</li>
+            </a>
+            <a href="../trans/transformaciones.html">
+                <li>Transformaciones CSS</li>
+            </a>
+            <a href="../calendario/calendario.html">
+                <li>Calendario</li>
+            </a>
+        </div>
+    </header>
+    <div class="main">
+        <h1 class="tit">Transformaciones XD LOL</h1>
+        <div class="division">
+            <h3 class="sin-margin"><ins>Transform: translate(con transition)</ins></h3>
+            <img src="../img/gatos.jpeg" class="mover" alt="" width="200">
+            <br>
+            <br>
+            <br>
+            <h3><ins>Transform: rotate</ins></h3>
+            <img src="../img/gatos.jpeg" class="rotar" alt="" width="200">
+            <br>
+            <br>
+            <br>
+            <h3><ins>Transform: scale</ins></h3>
+            <img src="../img/gatos.jpeg" class="escala" alt="" width="200">
+            <br>
+            <br>
+            <br>
+            <h3><ins>Transform: scaleY</ins></h3>
+            <img src="../img/gatos.jpeg" class="escalaY" alt="" width="200">
+            <br>
+            <br>
+            <br>
+            <h3><ins>Transform: scaleX</ins></h3>
+            <img src="../img/gatos.jpeg" class="escalaX" alt="" width="200">
+            <br>
+            <br>
+            <br>
+            <h3><ins>Transform: skew</ins></h3>
+            <img src="../img/gatos.jpeg" class="aplastar" alt="" width="200">
+            <br>
+            <br>
+            <br>
+            <h3><ins>Transform: rotateX</ins></h3>
+            <img src="../img/gatos.jpeg" class="rotarX" alt="" width="200">
+            <br>
+            <br>
+            <br>
+            <h3><ins>Transform: rotateY</ins></h3>
+            <img src="../img/gatos.jpeg" class="rotarY" alt="" width="200">
+        </div>
+
+        <h2 class="tit"><ins>Transiciones</ins></h2>
+        <div class="division2">
+            <h3>Zoom In</h3>
+            <img src="../img/kualaLumpur-736x1158.jpeg" alt="" class="zoomIn">
+            <br>
+            <br>
+            <br>
+            <h3 class="sin-margin">Zoom Out</h3>
+            <img src="../img/kualaLumpur-736x1158.jpeg" alt="" class="zoomOut">
+            <p class="elemento">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto perferendis, velit,
+                consequuntur modi laudantium nulla quae voluptates vitae eius esse autem? Magni officiis odit
+                praesentium eaque veritatis odio id fugit?</p>
+        </div>
+    </div>
+    <footer>
+        <div class="contenido">
+            <div class="col1">
+                <h4>LogoLand</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed illo aspernatur non?</p>
+            </div>
+            <div class="col2">
+                <h4>Tienda</h4>
+                <p>Venta Online</p>
+                <p>Novedades</p>
+                <p>Ejemplos</p>
+                <p>Editor de Tienda en Linea</p>
+                <p>Venta por menor Online</p>
+            </div>
+            <div class="col3">
+                <h4>Acerca De</h4>
+                <p>Eventos</p>
+                <p>Nuevos</p>
+                <p>Premios</p>
+                <p>Testimonios</p>
+                <p>Venta por menor Online</p>
+            </div>
+            <div class="col4">
+                <h4>Sobre Nosotros</h4>
+                <p>Contacto</p>
+                <p>Servicios</p>
+                <p>Equipo</p>
+                <p>Carrera</p>
+                <p>Ubicación</p>
+            </div>
+        </div>
+        <div class="fin">
+            <div class="priv">
+                <span>Politica de Privacidad</span><span>Terminos y Condiciones</span><span>Codigo de Conducta</span>
+            </div>
+            <div class="sociales">
+                <img src="/img/facebook.png" alt="" width="32">
+                <img src="/img/instagram.png" alt="" width="32">
+                <img src="/img/pinterest.png" alt="" width="32">
+                <img src="/img/twitter.png" alt="" width="32">
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
