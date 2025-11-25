@@ -1,0 +1,23 @@
+body {
+            background-color: #253900;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        table {
+            background-color: #C0C9EE;
+            margin: 50px 80px;
+        }
+
+        table td {
+            background-color: #C0C9EE;
+            padding: 7px;
+        }
+
+        dl dd {
+            color: gray;
+        }
+
+        h2 {
+            text-decoration: underline;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }

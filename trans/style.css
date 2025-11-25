@@ -1,0 +1,109 @@
+.tit {
+            text-align: center;
+            background-color: #253900;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+        }
+
+        .sin-margin {
+            margin-top: 0;
+            
+        }
+
+        .division {
+            column-count: 2;
+            column-rule: 3px dotted darkmagenta;
+            background-color: #253900;
+            padding-left: 10px;
+        }
+
+        .division2 {
+            column-count: 2;
+            column-rule: 3px dotted rgb(4, 41, 255);
+            background-color: #253900;
+            padding-left: 10px;
+        }
+
+        .mover:hover {
+            transform: translate(50px, 50px);
+            /* transition: all 1s; */
+            transition: ease-in 2s;
+        }
+
+        .rotar:hover {
+            transform: rotate(180deg);
+            /* transition: all 1s; */
+        }
+
+        .escala:hover {
+            /* transform: scale(0.5); */
+            transform: scale(3, 2);
+            /* el primer valor aumenta Xveces en X, el segundo en Y*/
+        }
+
+        .escalaX:hover {
+            transform: scaleX(2);
+        }
+
+        .escalaY:hover {
+            transform: scaleY(2);
+        }
+
+        .aplastar:hover {
+            transform: skew(35deg, 35deg);
+            /* Existe skewX y skewY */
+        }
+
+        .rotarX:hover {
+            transform: rotateX(120deg);
+        }
+
+        .rotarY:hover {
+            transform: rotateY(120deg);
+        }
+
+        .zoomIn {
+            width: 200px;
+            height: 200px;
+            transition: 2s;
+        }
+
+        .zoomIn:hover {
+            height: 50px;
+            width: 50px;
+        }
+
+        /* La transicion y la duracion se pone en la claseX sin hover, 
+las dimensiones se la transicion se ponen en la claseX:hover  */
+        .zoomOut {
+            width: 200px;
+            height: 200px;
+            transition: 4s;
+        }
+
+        .zoomOut:hover {
+            width: 300px;
+            height: 300px;
+            transform: rotate(60deg);
+        }
+
+        @keyframes cambiaColor {
+            from {
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+            }
+
+            to {
+                color: black;
+                background-color: rgb(163, 229, 8);
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        }
+
+        .elemento {
+            width: 180px;
+            height: 200px;
+            padding: 25px;
+            animation-name: cambiaColor;
+            animation-duration: 5s;
+        }
